@@ -24,12 +24,15 @@ if ($section_option =='show') {
     <div class="top-header">
         <div class="container">
             <div class="row ">
-                <ul class="contact-detail2 col-md-6 pull-left">
-
-                    <?php
+                <ul class="contact-detail2 col-md-12 pull-left">
+                                  <?php  
                     if (!empty($mobile_value)) {
                         ?>
-                        <li>
+                        <li class="pull-left">
+                        <?php echo do_shortcode('[sp_wpcarousel id="37"]'); ?>
+                        </li>
+
+                        <li class="pull-right">
                             <a href="<?php echo esc_url('tel:'.$mobile_value) ?>" target="_blank">
                                 <i class="fa <?php echo esc_attr($mobile_icon); ?>"></i>
                                 <?php
@@ -41,27 +44,17 @@ if ($section_option =='show') {
                     <?php }
                     if (!empty($email_value)) {
                         ?>
-                        <li>
+                        <li class="pull-right">
                             <a href="<?php echo esc_url('mailto:'.$email_value); ?>" target="_blank">
                                 <i class="fa <?php echo esc_attr($email_icon); ?>"></i>
                                 <?php echo esc_html($email_value); ?>
                             </a>
                         </li>
                     <?php } ?>
+                  
                 </ul>
-                <?php
-                if ($social_menu == 1) {
-                    ?>
-                    <div class="social-links quality-construction-pro-social-icons col-md-6 pull-right">
-                        <?php
-                        if (has_nav_menu('social-link')) {
-                            wp_nav_menu(array('theme_location' => 'social-link', 'menu_class' => 'social-icons hidden-xs pull-right '));
-                        }
-                        ?>
-                    </div>
-                    <?php
-                }
-                ?>
+              
+                
             </div>
         </div>
     </div>
