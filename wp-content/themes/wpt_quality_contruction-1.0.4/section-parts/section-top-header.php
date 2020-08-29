@@ -28,7 +28,7 @@ if ($section_option =='show') {
                                   <?php  
                     if (!empty($mobile_value)) {
                         ?>
-                        <li class="pull-left">
+                        <li class="pull-left">  
                         <?php echo do_shortcode('[sp_wpcarousel id="37"]'); ?>
                         </li>
 
